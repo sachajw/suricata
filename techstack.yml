@@ -2,7 +2,7 @@ repo_name: sachajw/suricata
 report_id: 5dc596208739c7107ed7e1318995520b
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T08:38:48+00:00'
+timestamp: '2024-02-29T18:48:30+00:00'
 requested_by: victorjulien
 provider: github
 branch: master
