@@ -109,7 +109,7 @@ jobs:
 
       # Download and extract dependency archives created during prep
       # job.
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: prep
           path: prep
@@ -229,7 +229,7 @@ jobs:
                 which \
                 zlib-devel
       - name: Download suricata.tar.gz
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: dist
       - run: tar zxvf suricata-*.tar.gz --strip-components=1
@@ -271,7 +271,7 @@ jobs:
       - name: Download suricata.tar.gz
         # Can't use @v2 here as it uses a binary that requires a newer
         # glibc than provided by CentOS 6.
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: dist
       - run: tar xvf dist/suricata-*.tar.gz --strip-components=1
@@ -341,7 +341,7 @@ jobs:
         run: cargo install --force --debug --version 0.14.1 cbindgen
       - run: echo "::add-path::$HOME/.cargo/bin"
       - uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: prep
           path: prep
@@ -414,7 +414,7 @@ jobs:
         run: cargo install --force --debug --version 0.14.1 cbindgen
       - run: echo "::add-path::$HOME/.cargo/bin"
       - uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: prep
           path: prep
@@ -496,7 +496,7 @@ jobs:
         run: cargo install --force --debug --version 0.14.1 cbindgen
       - run: echo "::add-path::$HOME/.cargo/bin"
       - uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: prep
           path: prep
@@ -571,7 +571,7 @@ jobs:
         run: cargo install --force --debug --version 0.14.1 cbindgen
       - run: echo "::add-path::$HOME/.cargo/bin"
       - uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: prep
           path: prep
@@ -619,7 +619,7 @@ jobs:
         run: curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain 1.34.2 -y
       - run: echo "::add-path::$HOME/.cargo/bin"
       - name: Download suricata.tar.gz
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: dist
       - name: Extract
@@ -687,7 +687,7 @@ jobs:
         run: cargo install --force --debug --version 0.14.1 cbindgen
       - run: echo "::add-path::$HOME/.cargo/bin"
       - uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: prep
           path: prep
@@ -748,7 +748,7 @@ jobs:
       - name: Install cbindgen
         run: cargo install --force --debug --version 0.14.1 cbindgen
       - uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: prep
           path: prep
@@ -798,7 +798,7 @@ jobs:
       - run: pip install PyYAML
       - uses: actions/checkout@v2
       - name: Downloading prep archive
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: prep
           path: prep
